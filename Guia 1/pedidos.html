@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos | Panadería Santa Rosa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d97706;
+            --bg: #fdfbf7;
+            --text: #1c1917;
+            --muted: #78716c;
+        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+        
+        header { background: #fff; border-bottom: 1px solid #f5e6d3; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+        .logo { font-weight: 700; color: var(--primary); font-size: 1.25rem; text-decoration: none; }
+        nav { display: flex; gap: 1.2rem; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: var(--primary); }
+
+        main { max-width: 550px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+        h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+        form { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid #f5e6d3; display: flex; flex-direction: column; gap: 1rem; }
+        
+        label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.3rem; }
+        input, select, textarea { width: 100%; padding: 0.7rem; border: 1px solid #d6d3d1; border-radius: 8px; font-family: inherit; font-size: 0.9rem; background: #fafaf9; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); background: #fff; }
+        textarea { resize: vertical; min-height: 80px; }
+
+        .checkbox-group { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; color: var(--muted); }
+        .checkbox-group input { width: auto; margin-top: 0.2rem; }
+
+        button { background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; padding: 0.8rem; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
+        button:hover { background: #b45309; }
+
+        footer { background: #1c1917; color: #fff; padding: 2rem 1.5rem; margin-top: 3rem; text-align: center; font-size: 0.9rem; }
+        footer address { font-style: normal; color: #d6d3d1; margin: 0.5rem 0; }
+        footer a { color: #fcd34d; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Santa Rosa</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Haz tu pedido</h1>
+        <p class="subtitle">Te confirmaremos por WhatsApp en menos de una hora.</p>
+
+        <form action="#">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required placeholder="Tu nombre">
+            </div>
+
+            <div>
+                <label for="celular">Celular</label>
+                <input type="tel" id="celular" required placeholder="900 000 000">
+            </div>
+
+            <div>
+                <label for="producto">Producto</label>
+                <select id="producto" required>
+                    <option value="">Elige un producto</option>
+                    <option>Pan francés</option>
+                    <option>Pan de yema</option>
+                    <option>Chancay</option>
+                    <option>Torta de chocolate</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" min="1" value="1" required>
+            </div>
+
+            <div>
+                <label for="fecha">Fecha de recojo</label>
+                <input type="date" id="fecha" required>
+            </div>
+
+            <div>
+                <label for="notas">Indicaciones (opcional)</label>
+                <textarea id="notas" placeholder="Ej. Torta sin frutos secos..."></textarea>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="consentimiento" required>
+                <label for="consentimiento">Autorizo el uso de mis datos solo para este pedido.</label>
+            </div>
+
+            <button type="submit">Enviar pedido</button>
+        </form>
+    </main>
+
+    <footer id="contacto">
+        <p><strong>Panadería Santa Rosa</strong></p>
+        <address>Av. Los Panaderos 123 · Cel: <a href="tel:+51900000000">900 000 000</a></address>
+        <p style="color: #a8a29e; font-size: 0.8rem;">Lun-Sáb: 6h - 21h · Dom: 6h - 13h</p>
+    </footer>
+
+</body>
+</html>

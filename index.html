@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio de Guías</title>
+  <!-- Fuente Google Fonts Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #5846f6;
+      --primary-hover: #4535d9;
+      --bg-color: #0b0f19;
+      --card-bg: #151c2e;
+      --text-color: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #232d45;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #7c66ff, #b266ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem 1.8rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(88, 70, 246, 0.25);
+      border-color: var(--primary-color);
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenido a mi Sitio Web</h1>
+    <p>Mis Proyectos y Guías de Trabajo</p>
+  </header>
+
+  <main class="container">
+    <!-- Tarjeta Guía 1 -->
+    <div class="card">
+      <div>
+        <h2 class="card-title">Guía 1</h2>
+        <p class="card-desc">Acceder al contenido principal del proyecto de la Guía 1.</p>
+      </div>
+      <a href="Guia 1/index.html" class="btn">Ir a Inicio (Index)</a>
+    </div>
+
+    <!-- Tarjeta Guía 2 -->
+    <div class="card">
+      <div>
+        <h2 class="card-title">Guía 2</h2>
+        <p class="card-desc">Acceder al contenido principal del proyecto de la Guía 2.</p>
+      </div>
+      <a href="Guia 2/index.html" class="btn">Ir a Inicio (Index)</a>
+    </div>
+
+    <!-- Tarjeta Guía 2.2 -->
+    <div class="card">
+      <div>
+        <h2 class="card-title">Guía 2.2</h2>
+        <p class="card-desc">Acceder al contenido principal del proyecto de la Guía 2.2.</p>
+      </div>
+      <a href="Guia 2.2/index.html" class="btn">Ir a Inicio (Index)</a>
+    </div>
+
+    <!-- Tarjeta Guía 3 -->
+    <div class="card">
+      <div>
+        <h2 class="card-title">Guía 3</h2>
+        <p class="card-desc">Acceder al contenido principal del proyecto de la Guía 3.</p>
+      </div>
+      <a href="Guia 3/index.html" class="btn">Ir a Inicio (Index)</a>
+    </div>
+  </main>
+
+</body>
+</html>

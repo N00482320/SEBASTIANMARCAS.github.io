@@ -1,0 +1,169 @@
+/* ==========================================================
+   ESTILOS MODERNOS Y ELABORADOS - PEDIDOS PANADERÍA SANTA ROSA
+   ========================================================== */
+
+/* Contenedor principal del formulario */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FDFBF7;
+  color: #2C1810;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #5C2D0C;
+  margin-bottom: 0.2rem;
+}
+
+header h2 {
+  color: #8B4513;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(92, 45, 12, 0.08);
+  border: 1px solid #EEDCC5;
+}
+
+/* Grupos de campos */
+form div {
+  margin-bottom: 1.25rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4A2E1B;
+}
+
+/* Inputs, select y textarea elegantes */
+form input[type="text"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #E6D5C3;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #FAFAFA;
+  color: #2C1810;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #8B4513;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(139, 69, 19, 0.1);
+}
+
+/* Estilo especial para textarea */
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Checkbox de consentimiento alineado */
+form label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+form input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #8B4513;
+  cursor: pointer;
+}
+
+/* 1. Mensajes de error debajo de cada campo */
+.error {
+  margin: 0.35rem 0 0 0;
+  color: #A11A1A;         /* Contraste de 7.4:1 sobre fondo claro */
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Si el párrafo de error está vacío, no ocupa espacio visual */
+.error:empty {
+  display: none;          
+}
+
+/* Agrega un símbolo de advertencia accesible */
+.error::before {
+  content: "⚠ ";          
+}
+
+/* 2. Resaltado de campos inválidos */
+[aria-invalid="true"] {
+  border-color: #A11A1A !important;
+  background-color: #FDF2F2 !important;
+}
+
+/* 3. Contador de caracteres */
+#contador-caracteres {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #8C7B70;
+  text-align: right;
+}
+
+/* 4. Zona de estado / confirmación del pedido con diseño de tarjeta */
+#estado:not(:empty) {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid #8B4513;
+  border-radius: 8px;
+  background: #FDF8F2;
+  color: #4A2E1B;
+  font-weight: 600;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(139, 69, 19, 0.05);
+}
+
+/* 5. Botón de envío llamativo y profesional */
+form button[type="submit"] {
+  width: 100%;
+  background-color: #8B4513;
+  color: #FFFFFF;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(139, 69, 19, 0.2);
+}
+
+form button[type="submit"]:hover {
+  background-color: #6D350E;
+}
+
+form button[type="submit"]:active {
+  transform: scale(0.99);
+}   

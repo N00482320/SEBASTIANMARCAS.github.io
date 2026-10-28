@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Santa Rosa - Formulario de Pedidos</title>
+    <link rel="stylesheet" href="stylos.css">
+    <script src="java.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Panadería Santa Rosa</h1>
+        <h2>Realiza tu Pedido</h2>
+    </header>
+    <main>
+        <!-- novalidate para usar las validaciones de JS -->
+        <form action="#" novalidate>
+
+            <!-- Campo Nombre -->
+            <div>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required aria-describedby="error-nombre">
+                <p class="error" id="error-nombre"></p>
+            </div>
+
+            <!-- Campo Celular -->
+            <div>
+                <label for="celular">Celular</label>
+                <input type="tel" id="celular" name="celular" required aria-describedby="error-celular">
+                <p class="error" id="error-celular"></p>
+            </div>
+
+            <!-- Campo Producto -->
+            <div>
+                <label for="producto">Producto</label>
+                <select id="producto" name="producto" required aria-describedby="error-producto">
+                    <option value="">-- Selecciona un producto --</option>
+                    <option value="Pan de yema">Pan de yema (S/ 0.50)</option>
+                    <option value="Pan francés">Pan francés (S/ 0.40)</option>
+                    <option value="Pan con chicharrón">Pan con chicharrón (S/ 8.00)</option>
+                    <option value="Pastel de acelga">Pastel de acelga (S/ 5.00)</option>
+                </select>
+                <p class="error" id="error-producto"></p>
+            </div>
+
+            <!-- Campo Cantidad -->
+            <div>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" required aria-describedby="error-cantidad">
+                <p class="error" id="error-cantidad"></p>
+            </div>
+
+            <!-- Campo Fecha de Recojo -->
+            <div>
+                <label for="fecha">Fecha de recojo</label>
+                <input type="date" id="fecha" name="fecha" required aria-describedby="error-fecha">
+                <p class="error" id="error-fecha"></p>
+            </div>
+
+            <!-- Campo Indicaciones (Reto: Contador de caracteres) -->
+            <div>
+                <label for="indicaciones">Indicaciones especiales (opcional)</label>
+                <textarea id="indicaciones" name="indicaciones" maxlength="200"
+                    aria-describedby="contador-caracteres"></textarea>
+                <small id="contador-caracteres">Te quedan 200 caracteres</small>
+            </div>
+
+            <!-- Campo Consentimiento -->
+            <div>
+                <label>
+                    <input type="checkbox" id="consentimiento" name="consentimiento" required
+                        aria-describedby="error-consentimiento">
+                    Autorizo el uso de mis datos para la atención de este pedido.
+                </label>
+                <p class="error" id="error-consentimiento"></p>
+            </div>
+
+            <!-- Zona de Confirmación / Estado de envío -->
+            <div id="estado" role="status"></div>
+
+            <button type="submit">Enviar pedido</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

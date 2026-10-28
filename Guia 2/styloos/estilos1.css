@@ -1,0 +1,201 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f6f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* NAVEGACIÓN */
+header {
+    background-color: #6b4226;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #f3a847;
+}
+
+.btn-nav-pedido {
+    background-color: #d97706;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+}
+
+/* HERO */
+.hero {
+    background-color: #ebd9c8;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    color: #4a2c11;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+}
+
+.btn-explorar {
+    display: inline-block;
+    background-color: #6b4226;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* CATÁLOGO DE PRODUCTOS */
+.titulo-seccion {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #4a2c11;
+}
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 230px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.precio {
+    color: #d97706;
+    font-weight: bold;
+}
+
+.input-cantidad {
+    width: 60px;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* FORMULARIO DE PEDIDO */
+.seccion-pedido {
+    max-width: 600px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.seccion-pedido h2 {
+    margin-bottom: 1.5rem;
+    color: #4a2c11;
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.resumen-total {
+    margin-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+#btn-confirmar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#btn-confirmar:hover {
+    background-color: #218838;
+}
+
+/* CONTACTO */
+.seccion-contacto {
+    background-color: #4a2c11;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.seccion-contacto h2 {
+    margin-bottom: 1rem;
+}

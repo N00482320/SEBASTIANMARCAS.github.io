@@ -1,0 +1,117 @@
+/* ==========================================
+   ESTILOS DE LA BARRA DE NAVEGACIÓN
+   ========================================== */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #78350f;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav-pedido {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn-nav-pedido:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* ==========================================
+   SECCIÓN DE INICIO / HERO
+   ========================================== */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.03));
+    border-radius: var(--radius);
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #78350f;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-explorar {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-explorar:hover {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================
+   SECCIÓN DE CONTACTO
+   ========================================== */
+.seccion-contacto {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 40px;
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    color: #78350f;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.seccion-contacto p {
+    margin: 8px 0;
+    color: var(--text-color);
+}

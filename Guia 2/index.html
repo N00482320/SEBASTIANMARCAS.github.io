@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Panadería y Pastelería</title>
+    <link rel="stylesheet" href="styloos/estilos1.css">
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🍞 Delicias del Horno</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#form-pedido" class="btn-nav-pedido">Pedidos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DE INICIO / HERO -->
+        <section id="inicio" class="hero">
+            <h2>¡El mejor pan artesanal y pasteles frescos todos los días!</h2>
+            <p>Horneados con ingredientes de la mejor calidad para endulzar y acompañar tus mañanas.</p>
+            <a href="#catalogo" class="btn-explorar">Ver Catálogo</a>
+        </section>
+
+        <!-- SECCIÓN DE CATÁLOGO Y FORMULARIO DE PEDIDOS -->
+        <form id="form-pedido">
+            <h1 id="catalogo" class="titulo-seccion">Catálogo de Panadería y Pastelería</h1>
+            
+            <section class="catalogo">
+                <article class="producto">
+                    <img src="img/pan-de-yema.jpg" alt="Pan de yema">
+                    <h3>Pan de yema</h3>
+                    <p><span class="precio">S/ 0.50</span> la unidad</p>
+                    <label for="cant-yema">Cantidad:</label>
+                    <input type="number" id="cant-yema" name="pan_yema" min="0" value="0" data-precio="0.50" class="input-cantidad">
+                </article>
+
+                <article class="producto">
+                    <img src="img/frances.jpg" alt="Pan francés">
+                    <h3>Pan francés</h3>
+                    <p><span class="precio">S/ 0.30</span> la unidad</p>
+                    <label for="cant-frances">Cantidad:</label>
+                    <input type="number" id="cant-frances" name="pan_frances" min="0" value="0" data-precio="0.30" class="input-cantidad">
+                </article>
+
+                <article class="producto">
+                    <img src="img/chancay.jpg" alt="Chancay">
+                    <h3>Chancay</h3>
+                    <p><span class="precio">S/ 0.60</span> la unidad</p>
+                    <label for="cant-chancay">Cantidad:</label>
+                    <input type="number" id="cant-chancay" name="chancay" min="0" value="0" data-precio="0.60" class="input-cantidad">
+                </article>
+
+                <article class="producto">
+                    <img src="img/tortadechoocoolate.jpg" alt="Torta de chocolate">
+                    <h3>Torta de chocolate</h3>
+                    <p><span class="precio">S/ 45.00</span> entera</p>
+                    <label for="cant-torta">Cantidad:</label>
+                    <input type="number" id="cant-torta" name="torta_chocolate" min="0" value="0" data-precio="45.00" class="input-cantidad">
+                </article>
+            </section>
+
+            <!-- SECCIÓN DE DATOS Y RESUMEN DEL PEDIDO -->
+            <section class="seccion-pedido">
+                <h2>Realizar Pedido</h2>
+                
+                <div class="datos-cliente">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono / WhatsApp:</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 987654321">
+                    </div>
+                    <div class="campo">
+                        <label for="direccion">Dirección de Entrega:</label>
+                        <input type="text" id="direccion" name="direccion" required placeholder="Ej. Av. Principal 123">
+                    </div>
+                    <div class="campo">
+                        <label for="notas">Notas adicionales:</label>
+                        <textarea id="notas" name="notas" rows="3" placeholder="Detalles específicos para la entrega..."></textarea>
+                    </div>
+                </div>
+
+                <div class="resumen-total">
+                    <h3>Total a pagar: <span id="total-precio">S/ 0.00</span></h3>
+                    <button type="submit" id="btn-confirmar">Confirmar Pedido</button>
+                </div>
+            </section>
+        </form>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto" class="seccion-contacto">
+            <h2>Contacto</h2>
+            <p>📍 <strong>Dirección:</strong> Av. Los Jazmines 456, Lima</p>
+            <p>📞 <strong>Teléfono:</strong> (01) 234-5678 / +51 987 654 321</p>
+            <p>🕒 <strong>Horario de atención:</strong> Lunes a Sábado de 6:00 a.m. a 9:00 p.m.</p>
+        </section>
+    </main>
+
+    <!-- SCRIPT PARA CALCULAR EL TOTAL AUTOMÁTICAMENTE -->
+    <script>
+        const inputsCantidad = document.querySelectorAll('.input-cantidad');
+        const totalElemento = document.getElementById('total-precio');
+
+        function calcularTotal() {
+            let total = 0;
+            inputsCantidad.forEach(input => {
+                const cantidad = parseInt(input.value) || 0;
+                const precio = parseFloat(input.getAttribute('data-precio'));
+                total += cantidad * precio;
+            });
+            totalElemento.textContent = `S/ ${total.toFixed(2)}`;
+        }
+
+        inputsCantidad.forEach(input => {
+            input.addEventListener('input', calcularTotal);
+        });
+
+        document.getElementById('form-pedido').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const totalText = totalElemento.textContent;
+            if (totalText === 'S/ 0.00') {
+                alert('Por favor, selecciona al menos un producto.');
+                return;
+            }
+            alert('¡Gracias por tu pedido! Nos pondremos en contacto contigo pronto.');
+        });
+    </script>
+</body>
+
+</html>
